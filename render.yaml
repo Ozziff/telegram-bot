@@ -1,0 +1,15 @@
+services:
+  # Service for Telegram Beer Bot
+  - type: web
+    name: pivnoi-vopros-bot
+    env: python
+    buildCommand: pip install -r requirements-project.txt
+    startCommand: bash start.sh
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: PORT
+        value: 10000
+    plan: free
+    autoDeploy: false
+    region: frankfurt
