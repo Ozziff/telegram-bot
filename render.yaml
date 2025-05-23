@@ -1,6 +1,6 @@
 services:
   # Service for Telegram Beer Bot
-  - type: web
+  - type: worker
     name: pivnoi-vopros-bot
     env: python
     buildCommand: pip install -r requirements-project.txt
