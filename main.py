@@ -158,7 +158,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
             try:
                 if zhiguli_count >= 3:
                     # Use absolute path for the image
-                    happy_image_path = os.path.join(BASE_DIR, 'zhiguli_happy.png')
+                    happy_image_path = os.path.join(BASE_DIR, 'zhiguli_happy.PNG')
                     logger.info(f"Attempting to send happy image from: {happy_image_path}")
                     
                     if os.path.exists(happy_image_path):
@@ -173,7 +173,7 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
                         await context.bot.send_message(chat_id=chat_id, text="Извините, изображение не найдено.")
                 else:
                     # Use absolute path for the image
-                    sad_image_path = os.path.join(BASE_DIR, 'zhiguli_sad.png')
+                    sad_image_path = os.path.join(BASE_DIR, 'zhiguli_sad.PNG')
                     logger.info(f"Attempting to send sad image from: {sad_image_path}")
                     
                     if os.path.exists(sad_image_path):
