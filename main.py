@@ -120,11 +120,11 @@ async def button_callback(update: Update, context: ContextTypes.DEFAULT_TYPE) ->
         chat_id = query.message.chat_id
         if zhiguli_count >= 3:
             # Send happy Zhiguli image
-            with open('zhiguli_happy.png', 'rb') as photo:
+            with open('zhiguli_happy.PNG', 'rb') as photo:
                 await context.bot.send_photo(chat_id=chat_id, photo=photo)
         else:
             # Send sad Zhiguli image
-            with open('zhiguli_sad.png', 'rb') as photo:
+            with open('zhiguli_sad.PNG', 'rb') as photo:
                 await context.bot.send_photo(chat_id=chat_id, photo=photo)
         
         return
